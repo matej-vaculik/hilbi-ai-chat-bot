@@ -82,8 +82,6 @@ Personal details are accepted without a content-blocking check in the browser or
 
 Only `/iq` receives encrypted chat messages; `/iq/key` serves public key material. Requests omit cookies and referrers, with no API keys, message logging, or browser metadata in the payload. Messages live in React memory; refreshing closes the conversation. The app makes no AI provider calls. A real service must enforce its own privacy policy, validation, retention, access controls, and HTTPS transport security. Encryption does not protect against malicious browser scripts, a compromised endpoint, or misuse of decrypted data.
 
-The doctor robot waves once with the hand on the viewer's left. The hand uses a chunky LEGO-style C-shaped gripper, wrist connector, and elbow bearing. It then keeps its existing floating and blinking animation. New chat does not replay the wave; reloading starts a new app session. Reduced motion disables the wave and idle animation.
-
 ## Tests
 
 Vitest covers empty/duplicate submissions, acceptance of personal details without redaction, encrypted payloads and real cryptographic round-trips, tamper rejection, cancellation, incremental rendering, UTF-8 and record splits, network/API/protocol failures, empty responses, interruption, retry, abort/unmount cleanup, the 100-answer catalog, and keyboard/IME behavior. Browser checks verify matching streamed replies, personal-detail submission, the information dialog, the mechanical wave, and the welcome screen after New chat.
